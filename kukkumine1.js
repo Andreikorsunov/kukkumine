@@ -1,5 +1,4 @@
 var x=280, y=30, y1=15, r=40, ysamm=1;
-var suurus = document.getElementById("suurus");
 var t, g;//tahvel, graafiline kontekst
 //liigutab palli liigu funktsiooniga
 //100 - tähendab 10 korda sekundis
@@ -35,4 +34,15 @@ function liigu(){
     y=y+ysamm;
     y1+=ysamm;
     joonista();
+}
+function InputSuurus(event){
+    var suurus=document.getElementById('suurus').value;
+
+    r=suurus;
+    r1=(suurus*1.3) - suurus;
+}
+function InputKiirus(event){
+    var kiirus=document.getElementById('kiirus').value;
+
+    setInterval('liigu()',kiirus);
 }

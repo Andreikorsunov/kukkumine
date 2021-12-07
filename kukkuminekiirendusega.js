@@ -1,5 +1,5 @@
 var x=20, y=20, r=10;
-var ysamm=0, ykiirendus=0;
+var ysamm=1, ykiirendus=0.4;
 var t, g; //tahvel, graafiline kontekst
 function algus(){
     t=document.getElementById("tahvel");
@@ -17,4 +17,15 @@ function liigu(){
     ysamm=ysamm+ykiirendus;
     y=y+ysamm;
     joonista();
+}
+function InputSuurus(event){
+    var suurus=document.getElementById('suurus').value;
+
+    r=suurus;
+    r1=(suurus*1.3) - suurus;
+}
+function InputyKiirus(event){
+    var kiirus=document.getElementById('kiirus').value;
+
+    setInterval('liigu()',kiirus);
 }
